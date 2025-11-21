@@ -2,171 +2,1067 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pauline's Cleaning Services & Laundry | Kampala, Uganda</title>
-  <meta name="description" content="Professional residential & commercial cleaning services in Kampala. Eco-friendly, reliable, door-to-door carpet & laundry services."/>
+  <title>Pauline Cleaning Services & Laundry | Kampala Uganda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Pauline’s Cleaning Services & Laundry - Professional cleaning and home management services in Kampala, Uganda. Clean spaces. Better living."
+  />
+  <style>
+    :root {
+      --primary: #0b9fbf;
+      --primary-dark: #06728a;
+      --accent: #f7b500;
+      --bg: #f5f7fb;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius-lg: 1.25rem;
+      --radius-pill: 999px;
+      --max-width: 1100px;
+    }
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <link rel="stylesheet" href="css/style.css"/>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout helpers */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -0.03em;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245, 247, 251, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 0%, #f9fafb, #0b9fbf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .logo-text span:first-child {
+      font-weight: 700;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-cta {
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-pill);
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 12px 25px rgba(11, 159, 191, 0.35);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Mobile nav */
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links.mobile-open {
+        display: flex;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        left: 0;
+        padding: 1rem 1.2rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(245, 247, 251, 0.98);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      .nav-cta {
+        align-self: flex-start;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4.5rem 0 3rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: #e0f7fd;
+      color: #03677f;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 span {
+      color: var(--primary-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tagline {
+      font-style: italic;
+      color: var(--primary-dark);
+      margin-bottom: 1.6rem;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-primary {
+      padding: 0.85rem 1.7rem;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 20px 40px rgba(11, 159, 191, 0.4);
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      padding: 0.85rem 1.3rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at 0% 0%, #e0f7fd, #0b495c);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.7rem;
+      color: var(--white);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(247, 181, 0, 0.22), transparent);
+      bottom: -60px;
+      right: -40px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      flex: 1 1 110px;
+      background: rgba(15, 23, 42, 0.25);
+      border-radius: 1rem;
+      padding: 0.75rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-stat span {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.45);
+      font-size: 0.78rem;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+    }
+
+    /* Section titles */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 2.7rem;
+    }
+
+    .section-heading h2 {
+      font-size: 1.7rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem 1.5rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .service-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .service-card li {
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 1.1rem;
+      line-height: 1;
+      top: 0.1rem;
+    }
+
+    @media (max-width: 800px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* About (Vision & Mission) */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.7rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .about-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      background: #e0f2fe;
+      color: #075985;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .about-highlight {
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Why choose us & Target */
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.8rem;
+      align-items: start;
+    }
+
+    .card-simple {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.7rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .card-simple h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-simple ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card-simple li {
+      margin-bottom: 0.45rem;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .card-simple li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .badge-soft {
+      display: inline-block;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: #fef3c7;
+      color: #92400e;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-details {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.7rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      font-size: 0.92rem;
+    }
+
+    .contact-details h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details p {
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .contact-row {
+      margin-top: 0.7rem;
+    }
+
+    .contact-row strong {
+      display: block;
+      font-size: 0.87rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-row span {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-row a {
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .contact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .contact-pill {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+    }
+
+    .contact-form {
+      background: linear-gradient(135deg, #0b9fbf, #0b495c);
+      border-radius: var(--radius-lg);
+      padding: 1.9rem 1.7rem;
+      color: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-form h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form p {
+      font-size: 0.88rem;
+      color: rgba(241, 245, 249, 0.9);
+      margin-bottom: 1.1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.9rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+      color: rgba(226, 232, 240, 0.9);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 0.9rem;
+      border: none;
+      padding: 0.7rem 0.75rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .contact-form .btn-primary {
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.4);
+      margin-top: 0.3rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer */
+    footer {
+      padding: 1.5rem 0 2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding-top: 1rem;
+    }
+
+    .footer-inner a {
+      color: var(--primary-dark);
+    }
+  </style>
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Pauline's Cleaning</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#top" class="logo">
+        <div class="logo-mark">P</div>
+        <div class="logo-text">
+          <span>Pauline’s Cleaning</span>
+          <span>Cleaning & Laundry Services</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        ☰
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero text-white d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="display-4 fw-bold">Clean Spaces.<br>Better Living.</h1>
-          <p class="lead my-4">Professional cleaning & home management services in Kampala. Reliable, eco-friendly, and affordable.</p>
-          <a href="tel:+256774279100" class="btn btn-primary btn-lg me-3">Call +256 774 279 100</a>
-          <a href="https://wa.me/256774279100" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </div>
-        <div class="col-lg-6 text-center mt-5 mt-lg-0">
-          <img src="img/logo.png" alt="Pauline's Cleaning Logo" class="img-fluid hero-logo"/>
-        </div>
-      </div>
+      <nav id="navLinks" class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+256774279100" class="nav-cta">Call +256 774 279100</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-title">Welcome to Pauline’s Cleaning Services & Laundry</h2>
-          <p class="lead">
-            A Ugandan-based cleaning and home management company committed to delivering reliable, efficient, and affordable solutions for homes and businesses in Kampala.
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Professional Cleaning & Home Management
+          </div>
+          <h1>
+            Clean <span>Spaces</span>. Better <span>Living</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Pauline’s Cleaning Services & Laundry provides reliable, efficient, and affordable
+            cleaning for homes, offices, guest houses, and more in Kampala and surrounding areas.
+          </p>
+          <p class="hero-tagline">“Clean Spaces. Better Living.”</p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/256774279100" class="btn-primary">
+              Book a Cleaning on WhatsApp →
+            </a>
+            <a href="#services" class="btn-ghost">
+              View Services
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong>Door-to-door convenience</strong><br />
+              We pick up, clean, and deliver your items.
+            </div>
+            <div>
+              <strong>Residential & Commercial</strong><br />
+              Tailored packages for homes, offices, and Airbnbs.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Service highlights">
+          <div class="hero-tag">
+            ✨ Trusted cleaning partner in Kampala
+          </div>
+          <h2 style="font-size:1.2rem;margin-bottom:0.2rem;">
+            Professional & Eco-Friendly Cleaning
+          </h2>
+          <p style="font-size:0.9rem;color:rgba(241,245,249,0.9);max-width:17rem;">
+            From quick house refreshes to deep cleaning, we keep your spaces spotless so you can
+            focus on what matters most.
+          </p>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span>7+</span>
+              Service categories<br />
+              Homes, offices, events & more.
+            </div>
+            <div class="hero-stat">
+              <span>100%</span>
+              Customer care<br />
+              Professional, punctual, and reliable.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Cleaning & Home Management Services</h2>
+          <p>
+            We offer one-time and routine cleaning plans tailored to your needs – from
+            residential homes to busy commercial spaces.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services -->
-  <section id="services" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <i class="fas fa-home fa-3x text-primary mb-3"></i>
-              <h5>Residential Cleaning</h5>
-              <p>Daily/weekly/monthly cleaning, deep cleaning, laundry, mattress & upholstery, carpet pickup & delivery.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <i class="fas fa-building fa-3x text-primary mb-3"></i>
-              <h5>Commercial & Office Cleaning</h5>
-              <p>Routine office maintenance, post-construction cleaning, floor waxing, conference rooms & washrooms.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <i class="fas fa-car fa-3x text-primary mb-3"></i>
-              <h5>Specialized Services</h5>
-              <p>Vehicle interior cleaning, event venue cleaning, pest control, fumigation, disinfection.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <i class="fas fa-seedling fa-3x text-primary mb-3"></i>
-              <h5>Home Management</h5>
-              <p>Housekeeping & nanny placement, gardening, errands, Airbnb & guest house management.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <i class="fas fa-truck-loading fa-3x text-primary mb-3"></i>
-              <h5>Door-to-Door Laundry & Carpet</h5>
-              <p>We pick up, professionally clean, and deliver back to your doorstep.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-label">Residential</div>
+            <h3>Residential Cleaning</h3>
+            <ul>
+              <li>General house cleaning (daily, weekly, or monthly)</li>
+              <li>Deep cleaning &amp; spring cleaning</li>
+              <li>Bathroom &amp; kitchen sanitation</li>
+              <li>Window and curtain cleaning</li>
+              <li>Laundry and ironing services</li>
+              <li>Mattress, sofa &amp; upholstery cleaning</li>
+              <li>Carpet &amp; rug cleaning (door-to-door pickup)</li>
+              <li>Floor scrubbing, polishing &amp; tile treatment</li>
+            </ul>
+          </article>
 
-  <!-- Why Choose Us -->
-  <section id="why-us" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Why Choose Pauline’s</h2>
-      <div class="row g-5">
-        <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Professional & Trustworthy Staff</strong> – Trained, uniformed, vetted</li>
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Eco-Friendly Products</strong> – Safe for kids, pets & the environment</li>
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Flexible Packages</strong> – Daily, weekly, monthly or one-time</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Door-to-Door Convenience</strong> – Pickup & delivery for carpets & laundry</li>
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Reliable & Punctual</strong> – We respect your time</li>
-            <li class="mb-4"><i class="fas fa-check-circle text-success me-3"></i><strong>Affordable Pricing</strong> – High quality doesn’t have to be expensive</li>
-          </ul>
+          <article class="service-card">
+            <div class="service-label">Commercial</div>
+            <h3>Commercial &amp; Office Cleaning</h3>
+            <ul>
+              <li>Routine office cleaning &amp; maintenance</li>
+              <li>Post-construction &amp; renovation cleaning</li>
+              <li>Floor waxing &amp; carpet care for offices</li>
+              <li>Conference room &amp; reception upkeep</li>
+              <li>Washroom &amp; kitchen hygiene management</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Specialised</div>
+            <h3>Specialized Cleaning Services</h3>
+            <ul>
+              <li>Door-to-door carpet cleaning &amp; delivery</li>
+              <li>Vehicle interior cleaning</li>
+              <li>Event venue setup &amp; post-event cleaning</li>
+              <li>Pest control &amp; fumigation</li>
+              <li>Disinfection &amp; sanitisation (homes, schools, offices)</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Home Management</div>
+            <h3>Home Management Services</h3>
+            <ul>
+              <li>Housekeeping &amp; nanny placement</li>
+              <li>Laundry collection &amp; delivery</li>
+              <li>Gardening &amp; compound maintenance</li>
+              <li>Errand running (groceries, dry cleaning, etc.)</li>
+              <li>Guest house &amp; Airbnb cleaning management</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-5 bg-primary text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2>Get In Touch Today!</h2>
-          <p class="lead">Bweyogerere, Kampala – Uganda</p>
-          <p class="fs-3 mb-4">
-            <a href="tel:+256774279100" class="text-white text-decoration-none">+256 774 279 100</a> / 
-            <a href="tel:+256751105407" class="text-white text-decoration-none">+256 751 105 407</a>
+    <!-- About: Vision & Mission -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Pauline’s Cleaning Services & Laundry</h2>
+          <p>
+            We are a Ugandan-based cleaning and home management company committed to
+            cleanliness, hygiene, and order in every space we serve.
           </p>
-          <a href="https://wa.me/256774279100" target="_blank" class="btn btn-light btn-lg"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-pill">Our Vision</div>
+            <h3>Uganda’s Most Trusted Cleaning Partner</h3>
+            <p>
+              To be Uganda’s most trusted and efficient cleaning service provider,
+              setting the standard for quality, reliability, and customer care.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-pill">Our Mission</div>
+            <h3>Clean, Healthy &amp; Organised Spaces</h3>
+            <p class="about-highlight">
+              To create cleaner, healthier, and more organised living and working
+              spaces through eco-friendly cleaning practices and professional service
+              delivery – enabling our clients to live and work comfortably.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Why Us & Who We Serve -->
+    <section id="why-us">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why Choose Pauline’s Cleaning?</h2>
+          <p>
+            Professional staff, modern equipment, and flexible packages tailored to
+            homes, offices, and hospitality spaces across Uganda.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <article class="card-simple">
+            <span class="badge-soft">Why Clients Trust Us</span>
+            <h3>Reliable, Quality-Driven Service</h3>
+            <ul>
+              <li>Professional staff – trained, trustworthy &amp; uniformed teams.</li>
+              <li>Use of safe, eco-friendly cleaning products.</li>
+              <li>Customised cleaning packages and flexible schedules.</li>
+              <li>Punctual, consistent, and quality-driven service delivery.</li>
+              <li>Door-to-door convenience for laundry &amp; carpets.</li>
+            </ul>
+          </article>
+
+          <article class="card-simple">
+            <span class="badge-soft">Who We Serve</span>
+            <h3>Our Target Clients</h3>
+            <ul>
+              <li>Households and residential apartments.</li>
+              <li>Offices and corporate institutions.</li>
+              <li>Hotels, guest houses, and Airbnbs.</li>
+              <li>Schools, hospitals, and churches.</li>
+              <li>Event venues and commercial buildings.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Let’s Keep Your Space Spotless</h2>
+          <p>
+            Get in touch today to request a quote, book a routine cleaning, or schedule
+            a one-off deep clean.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <h3>Contact & Location</h3>
+            <p>
+              We’re based in Bweyogerere, Kampala – Uganda, and serve clients in
+              Kampala and surrounding areas.
+            </p>
+
+            <div class="contact-row">
+              <strong>Address</strong>
+              <span>Bweyogerere, Kampala – Uganda</span>
+            </div>
+
+            <div class="contact-row">
+              <strong>Call / WhatsApp</strong>
+              <span>
+                <a href="tel:+256774279100">+256 774 279100</a> &nbsp;/&nbsp;
+                <a href="tel:+256751105407">+256 751 105407</a>
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <strong>Social</strong>
+              <span>
+                Instagram / Facebook: <strong>@sarahnakandi370</strong>
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <strong>Ideal for</strong>
+              <div class="contact-pills">
+                <div class="contact-pill">Home Cleaning</div>
+                <div class="contact-pill">Office Cleaning</div>
+                <div class="contact-pill">Airbnb Turnover</div>
+                <div class="contact-pill">Carpet &amp; Sofa Care</div>
+                <div class="contact-pill">Events &amp; Functions</div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="mailto:info@example.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <h3>Request a Free Cleaning Quote</h3>
+            <p>
+              Share a few details and we’ll get back to you with a customised cleaning
+              plan and quotation.
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input id="name" name="Name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  id="phone"
+                  name="Phone"
+                  type="tel"
+                  placeholder="+256..."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Type of Service</label>
+              <input
+                id="service"
+                name="Service"
+                type="text"
+                placeholder="e.g. Deep cleaning for 3-bedroom house"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Details</label>
+              <textarea
+                id="message"
+                name="Message"
+                placeholder="Preferred date, location, special requests..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              Send Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>&copy; 2025 Pauline’s Cleaning Services & Laundry. All rights reserved.</p>
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Pauline’s Cleaning Services &amp; Laundry. All rights reserved.</div>
+      <div>“Clean Spaces. Better Living.”</div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile nav toggle
+    function toggleNav() {
+      var nav = document.getElementById("navLinks");
+      nav.classList.toggle("mobile-open");
+    }
+
+    // Current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
